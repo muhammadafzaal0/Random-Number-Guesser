@@ -1,0 +1,22 @@
+let random = Math.round(Math.random() * 100 - 1)
+console.log(random)
+
+let number;
+let attempt = 0;
+while (number != random) {
+    number = prompt("Enter a number")
+    number = Number(number)
+    if (number > 100 || number < 1) {
+        alert("Please enter number between 1 _ 100")
+
+    } else if (number > random) {
+        alert("Entered number! TOO High, Try again")
+
+    } else if (number < random){
+        alert("Entered number! TOO Low, Try again")
+
+    }
+    attempt++;
+
+}
+alert( `Your entered number is correct! ${random} and you guss number with ${attempt} attempts `)
